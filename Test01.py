@@ -7,9 +7,11 @@ m2 = q2 * v2
 pm = (m1+m2)/(q1+q2)
 novoq1 = q1 + q2
 novov1 = pm
-while
-opção = str(input('Deseja calcular mais um preço médio? [S/N] ')).strip().upper()[0]
-    opção = str(input(''))
+'''opção = str(input('Deseja calcular mais um preço médio? [S/N] ')).strip().upper()[0]
+while opção not in 'SsNn':
+    opção = str(input('Digite um valor: '))
+        print('Seu novo total de moedas é {}'.format(novoq1))
+        print('Seu novo preço médio é {}'.format_map(novov1))'''
 
-print('O preço medio é R${:.2f}'.format(pm))
-print('Agora você tem {} com preço médio de {:.2f}'.format(novoq1, novov1))
+#print('O preço medio é R${:.2f}'.format(pm))
+print('Agora você tem {:.4f} moedas com preço médio de R${:.4f}'.format(novoq1, novov1))
