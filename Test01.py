@@ -22,6 +22,7 @@ while opção != 3:
         m2 = q2 * v2
         qtotal = q1 + q2
         pm = (m1 + m2) / (q1 + q2)
+        print('=-=' * 10)
         print('A quantidade total é {:.4f} com preço medio de R${:.4f}'.format(qtotal, pm))
     elif opção == 2:
         print('Informe os valores novamente:')
