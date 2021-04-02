@@ -9,12 +9,19 @@ v2 = float(input('Digite o valor da segunda compra: R$'))
 m1 = q1 * v1
 m2 = q2 * v2
 pm = (m1+m2)/(q1+q2)
+novoq1 = q1 + q2
+pm1 = pm
+novom1 = novoq1 * pm1
+novom2 = q2 * v2
+pm2 = (novom1+novom2)/(novoq1+q2)
+qtotal1 = novoq1 + q2
 opção = 0
-while opção != 3:
+while opção != 4:
     print('''    
     [ 1 ] Mostrar preço médio
     [ 2 ] Calcular outro preço médio
-    [ 3 ] Sair
+    [ 3 ] Continuar calculando
+    [ 4 ] Sair
     ''')
     opção = int(input('>>>>> Qual é a sua opção?'))
     if opção == 1:
@@ -31,6 +38,11 @@ while opção != 3:
         q2 = float(input('Digite a quantidade da segunda compra:'))
         v2 = float(input('Digite o valor da segunda compra: R$'))
     elif opção == 3:
+        print('A quantidade total é {:.4f} com preço medio de R${:.4f}'.format(novoq1, pm1))
+        q2 = float(input('Digite outra quantidade:'))
+        v2 = float(input('Digite outro valor: R$'))
+        print('A quantidade total é {:.4f} com preço medio de R${:.4f}'.format(qtotal1, pm2))
+    elif opção == 4:
         print('Finalizando...')
     else:
         print('Opção inválida. Tente novamente!')
